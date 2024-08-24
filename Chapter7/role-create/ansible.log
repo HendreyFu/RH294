@@ -1,0 +1,21 @@
+2024-08-22 01:57:58,887 p=4394 u=student n=ansible | PLAY [Use myvhost role playbook] ***********************************************************
+2024-08-22 01:57:58,896 p=4394 u=student n=ansible | TASK [Gathering Facts] *********************************************************************
+2024-08-22 01:58:00,413 p=4394 u=student n=ansible | ok: [servera.lab.example.com]
+2024-08-22 01:58:00,420 p=4394 u=student n=ansible | TASK [pre_tasks message] *******************************************************************
+2024-08-22 01:58:00,432 p=4394 u=student n=ansible | ok: [servera.lab.example.com] => {
+    "msg": "Ensure web server configuration."
+}
+2024-08-22 01:58:00,448 p=4394 u=student n=ansible | TASK [myvhost : Ensure httpd is installed] *************************************************
+2024-08-22 01:58:01,599 p=4394 u=student n=ansible | ok: [servera.lab.example.com]
+2024-08-22 01:58:01,605 p=4394 u=student n=ansible | TASK [myvhost : Ensure httpd is started and enabled] ***************************************
+2024-08-22 01:58:02,387 p=4394 u=student n=ansible | ok: [servera.lab.example.com]
+2024-08-22 01:58:02,393 p=4394 u=student n=ansible | TASK [myvhost : vhost file is installed] ***************************************************
+2024-08-22 01:58:03,298 p=4394 u=student n=ansible | ok: [servera.lab.example.com]
+2024-08-22 01:58:03,314 p=4394 u=student n=ansible | TASK [HTML content is installed] ***********************************************************
+2024-08-22 01:58:03,982 p=4394 u=student n=ansible | ok: [servera.lab.example.com]
+2024-08-22 01:58:03,988 p=4394 u=student n=ansible | TASK [post_tasks message] ******************************************************************
+2024-08-22 01:58:04,002 p=4394 u=student n=ansible | ok: [servera.lab.example.com] => {
+    "msg": "Web server is configured."
+}
+2024-08-22 01:58:04,014 p=4394 u=student n=ansible | PLAY RECAP *********************************************************************************
+2024-08-22 01:58:04,014 p=4394 u=student n=ansible | servera.lab.example.com    : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
