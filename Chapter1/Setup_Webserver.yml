@@ -1,0 +1,35 @@
+
+---
+- name: Install and start Apache HTTPD
+  hosts: web
+  tasks:
+    - name: httpd package is present
+      ansible.builtin.yum:
+        name:
+          - httpd
+          - firewalld
+        state: present
+
+    - name: Create an Index.HTML File
+      ansible.builtin.copy:
+        content: This is a test page on Apache!!
+        dest: /var/www/html/index.html
+
+    - name: httpd is started
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Firewall is Enabled
+      ansible.builtin.service:
+        name: firewalld
+        state: started
+        enabled: true
+
+    - name: HTTP Service is Open on Firewall
+      ansible.posix.firewalld:
+        service: http
+        state: enabled
+        permanent: true
+        immediate: yes

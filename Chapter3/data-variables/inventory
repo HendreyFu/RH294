@@ -1,0 +1,3 @@
+
+[webserver]
+servera.lab.example.com web_pkg=nginx web_service=nginx
