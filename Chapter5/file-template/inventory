@@ -1,0 +1,13 @@
+servera
+serverb
+serverc
+serverd
+
+[web]
+servera
+serverb
+serverf
+
+[database]
+serverc
+serverd

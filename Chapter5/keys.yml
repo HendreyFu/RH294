@@ -1,0 +1,10 @@
+---
+- name: Add Keys to hosts
+  hosts: web
+  tasks:
+    - name: Install Key
+      ansible.posix.authorized_key:
+       user: student
+       state: present
+       key: "{{ lookup('file','/home/student/.ssh/id_rsa.pub') }}"
+...
